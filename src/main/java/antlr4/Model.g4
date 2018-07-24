@@ -1,9 +1,8 @@
 grammar Model;
 
 modelDeclare: MODELNAME '=' '{' block '}';
-
-block:(TYPE IDENTIFIER)+;
-
+block:(fieldDeclare)+;
+fieldDeclare:TYPE IDENTIFIER;
 
 TYPE
 :'int'
