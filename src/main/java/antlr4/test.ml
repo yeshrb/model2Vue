@@ -3,6 +3,6 @@ Person {
     string name
     Data birthday
     constraints={ 
-    	age nullable:true validator:validator
+    	age nullable:true blank:false validator:sfzh
     }
 }
