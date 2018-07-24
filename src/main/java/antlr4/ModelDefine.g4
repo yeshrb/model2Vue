@@ -1,4 +1,14 @@
 grammar ModelDefine;
+
+CLASS:      'class';
+BOOLEAN:    'bool';
+STRING:     'string';
+NUMBER:     'number';
+DATA:       'dataTime';
+CONSKEYWORD: 'constraints';
+VALIDATORKEYWORD: 'validator';
+
+
 modelDeclaration
     : IDENTIFIER modelBody
     ;
@@ -6,8 +16,7 @@ modelBody
     : '{' modelBodyDeclaration '}'
     ;
 modelBodyDeclaration
-    : fieldDeclaration
-    | constraintDeclaration*
+    : fieldDeclaration constraintDeclaration*
     ;
 
 
@@ -34,7 +43,7 @@ fieldDeclaratorId
     : IDENTIFIER ('[' ']')*
     ;
 constraintDeclaration
-    : CONSKEYWORD constraintBody
+    : CONSKEYWORD '=' constraintBody
     ;
 
 constraintBody
@@ -42,12 +51,26 @@ constraintBody
     ;
 constraintBodyDeclaration
     :
-    | fieldDeclaratorId (constraint)+
+    | fieldDeclaratorId ((constraint)+ |(validator)*)
     ;
 constraint
-     :'nullable'
+     :CONSTRAINTKEY ':' CONSTRAINTVAL
      ;
+validator
+    :VALIDATORKEYWORD ':' validatorId
+    ;
+validatorId
+    :IDENTIFIER
+    ;
 
+CONSTRAINTKEY
+    :'nullable'
+    |'bb'
+    ;
+CONSTRAINTVAL
+    :'true'
+    |'false'
+    ;
 IDENTIFIER:(Letter)+;
 WS:                 [ \t\r\n\u000C]+ -> channel(HIDDEN);
 COMMENT:            '/*' .*? '*/'    -> channel(HIDDEN);
@@ -60,10 +83,4 @@ Letter
     | [\uD800-\uDBFF] [\uDC00-\uDFFF] // covers UTF-16 surrogate pairs encodings for U+10000 to U+10FFFF
     ;
 
-// Keywords
-CLASS:      'class';
-BOOLEAN:    'bool';
-STRING:     'string';
-NUMBER:     'number';
-DATA:       'dataTime';
-CONSKEYWORD: 'constraints';
+

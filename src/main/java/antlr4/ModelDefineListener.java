@@ -1,9 +1,5 @@
-
-package antlr4;
 // Generated from ModelDefine.g4 by ANTLR 4.7.1
 import org.antlr.v4.runtime.tree.ParseTreeListener;
-
-import java.io.IOException;
 
 /**
  * This interface defines a complete listener for a parse tree produced by
@@ -90,4 +86,64 @@ public interface ModelDefineListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitFieldDeclaratorId(ModelDefineParser.FieldDeclaratorIdContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ModelDefineParser#constraintDeclaration}.
+	 * @param ctx the parse tree
+	 */
+	void enterConstraintDeclaration(ModelDefineParser.ConstraintDeclarationContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ModelDefineParser#constraintDeclaration}.
+	 * @param ctx the parse tree
+	 */
+	void exitConstraintDeclaration(ModelDefineParser.ConstraintDeclarationContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ModelDefineParser#constraintBody}.
+	 * @param ctx the parse tree
+	 */
+	void enterConstraintBody(ModelDefineParser.ConstraintBodyContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ModelDefineParser#constraintBody}.
+	 * @param ctx the parse tree
+	 */
+	void exitConstraintBody(ModelDefineParser.ConstraintBodyContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ModelDefineParser#constraintBodyDeclaration}.
+	 * @param ctx the parse tree
+	 */
+	void enterConstraintBodyDeclaration(ModelDefineParser.ConstraintBodyDeclarationContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ModelDefineParser#constraintBodyDeclaration}.
+	 * @param ctx the parse tree
+	 */
+	void exitConstraintBodyDeclaration(ModelDefineParser.ConstraintBodyDeclarationContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ModelDefineParser#constraint}.
+	 * @param ctx the parse tree
+	 */
+	void enterConstraint(ModelDefineParser.ConstraintContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ModelDefineParser#constraint}.
+	 * @param ctx the parse tree
+	 */
+	void exitConstraint(ModelDefineParser.ConstraintContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ModelDefineParser#validator}.
+	 * @param ctx the parse tree
+	 */
+	void enterValidator(ModelDefineParser.ValidatorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ModelDefineParser#validator}.
+	 * @param ctx the parse tree
+	 */
+	void exitValidator(ModelDefineParser.ValidatorContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ModelDefineParser#validatorId}.
+	 * @param ctx the parse tree
+	 */
+	void enterValidatorId(ModelDefineParser.ValidatorIdContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ModelDefineParser#validatorId}.
+	 * @param ctx the parse tree
+	 */
+	void exitValidatorId(ModelDefineParser.ValidatorIdContext ctx);
 }
