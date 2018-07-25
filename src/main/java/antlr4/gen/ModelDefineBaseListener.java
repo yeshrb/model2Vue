@@ -1,4 +1,4 @@
-// Generated from D:/products/model2Vue/src/main/java/antlr4\ModelDefine.g4 by ANTLR 4.7
+// Generated from /Users/ljj/proLearn/anltr4/model2Vue/src/main/java/antlr4/ModelDefine.g4 by ANTLR 4.7
 package antlr4.gen;
 
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -112,25 +112,25 @@ public class ModelDefineBaseListener implements ModelDefineListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterConstraintDeclaration(ModelDefineParser.ConstraintDeclarationContext ctx) { }
+	@Override public void enterConstraintsDeclaration(ModelDefineParser.ConstraintsDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitConstraintDeclaration(ModelDefineParser.ConstraintDeclarationContext ctx) { }
+	@Override public void exitConstraintsDeclaration(ModelDefineParser.ConstraintsDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterConstraintBody(ModelDefineParser.ConstraintBodyContext ctx) { }
+	@Override public void enterConstraintsBody(ModelDefineParser.ConstraintsBodyContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitConstraintBody(ModelDefineParser.ConstraintBodyContext ctx) { }
+	@Override public void exitConstraintsBody(ModelDefineParser.ConstraintsBodyContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -143,6 +143,18 @@ public class ModelDefineBaseListener implements ModelDefineListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitConstraintBodyDeclaration(ModelDefineParser.ConstraintBodyDeclarationContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterConstraintFieldDeclare(ModelDefineParser.ConstraintFieldDeclareContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitConstraintFieldDeclare(ModelDefineParser.ConstraintFieldDeclareContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

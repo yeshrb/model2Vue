@@ -1,4 +1,4 @@
-// Generated from D:/products/model2Vue/src/main/java/antlr4\ModelDefine.g4 by ANTLR 4.7
+// Generated from /Users/ljj/proLearn/anltr4/model2Vue/src/main/java/antlr4/ModelDefine.g4 by ANTLR 4.7
 package antlr4.gen;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -88,25 +88,25 @@ public interface ModelDefineListener extends ParseTreeListener {
 	 */
 	void exitFieldDeclaratorId(ModelDefineParser.FieldDeclaratorIdContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ModelDefineParser#constraintDeclaration}.
+	 * Enter a parse tree produced by {@link ModelDefineParser#constraintsDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterConstraintDeclaration(ModelDefineParser.ConstraintDeclarationContext ctx);
+	void enterConstraintsDeclaration(ModelDefineParser.ConstraintsDeclarationContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ModelDefineParser#constraintDeclaration}.
+	 * Exit a parse tree produced by {@link ModelDefineParser#constraintsDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitConstraintDeclaration(ModelDefineParser.ConstraintDeclarationContext ctx);
+	void exitConstraintsDeclaration(ModelDefineParser.ConstraintsDeclarationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ModelDefineParser#constraintBody}.
+	 * Enter a parse tree produced by {@link ModelDefineParser#constraintsBody}.
 	 * @param ctx the parse tree
 	 */
-	void enterConstraintBody(ModelDefineParser.ConstraintBodyContext ctx);
+	void enterConstraintsBody(ModelDefineParser.ConstraintsBodyContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ModelDefineParser#constraintBody}.
+	 * Exit a parse tree produced by {@link ModelDefineParser#constraintsBody}.
 	 * @param ctx the parse tree
 	 */
-	void exitConstraintBody(ModelDefineParser.ConstraintBodyContext ctx);
+	void exitConstraintsBody(ModelDefineParser.ConstraintsBodyContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ModelDefineParser#constraintBodyDeclaration}.
 	 * @param ctx the parse tree
@@ -117,6 +117,16 @@ public interface ModelDefineListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitConstraintBodyDeclaration(ModelDefineParser.ConstraintBodyDeclarationContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ModelDefineParser#constraintFieldDeclare}.
+	 * @param ctx the parse tree
+	 */
+	void enterConstraintFieldDeclare(ModelDefineParser.ConstraintFieldDeclareContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ModelDefineParser#constraintFieldDeclare}.
+	 * @param ctx the parse tree
+	 */
+	void exitConstraintFieldDeclare(ModelDefineParser.ConstraintFieldDeclareContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ModelDefineParser#constaintFiledId}.
 	 * @param ctx the parse tree

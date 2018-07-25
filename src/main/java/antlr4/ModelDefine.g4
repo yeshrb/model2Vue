@@ -9,7 +9,7 @@ modelBody
     : LBRACE modelBodyDeclaration RBRACE
     ;
 modelBodyDeclaration
-    : fieldDeclaration* constraintDeclaration*
+    : fieldDeclaration* constraintsDeclaration*
     ;
 
 /**
@@ -42,17 +42,18 @@ fieldDeclaratorId
 *约束域定义规则
 */
 
-constraintDeclaration
-    : CONSKEYWORD constraintBody
+constraintsDeclaration
+    : CONSKEYWORD  constraintsBody
     ;
 
-constraintBody
+constraintsBody
     : LBRACE constraintBodyDeclaration RBRACE
     ;
 constraintBodyDeclaration
-    :
-    | constaintFiledId (constraintDeclare)+ (validatorDeclare)
+    :constraintFieldDeclare*
     ;
+
+constraintFieldDeclare : constaintFiledId (constraintDeclare)+ (validatorDeclare) ;
 
 constaintFiledId
      : IDENTIFIER ('[' ']')*

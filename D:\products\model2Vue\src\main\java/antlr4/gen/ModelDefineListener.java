@@ -1,4 +1,5 @@
-// Generated from ModelDefine.g4 by ANTLR 4.7.1
+// Generated from /Users/ljj/proLearn/anltr4/model2Vue/src/main/java/antlr4/ModelDefine.g4 by ANTLR 4.7
+package antlr4.gen;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -116,6 +117,26 @@ public interface ModelDefineListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitConstraintBodyDeclaration(ModelDefineParser.ConstraintBodyDeclarationContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ModelDefineParser#constraintFieldDeclare}.
+	 * @param ctx the parse tree
+	 */
+	void enterConstraintFieldDeclare(ModelDefineParser.ConstraintFieldDeclareContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ModelDefineParser#constraintFieldDeclare}.
+	 * @param ctx the parse tree
+	 */
+	void exitConstraintFieldDeclare(ModelDefineParser.ConstraintFieldDeclareContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ModelDefineParser#constaintFiledId}.
+	 * @param ctx the parse tree
+	 */
+	void enterConstaintFiledId(ModelDefineParser.ConstaintFiledIdContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ModelDefineParser#constaintFiledId}.
+	 * @param ctx the parse tree
+	 */
+	void exitConstaintFiledId(ModelDefineParser.ConstaintFiledIdContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ModelDefineParser#constraintDeclare}.
 	 * @param ctx the parse tree

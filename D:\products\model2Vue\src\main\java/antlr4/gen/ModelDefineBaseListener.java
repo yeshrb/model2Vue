@@ -1,4 +1,5 @@
-// Generated from ModelDefine.g4 by ANTLR 4.7.1
+// Generated from /Users/ljj/proLearn/anltr4/model2Vue/src/main/java/antlr4/ModelDefine.g4 by ANTLR 4.7
+package antlr4.gen;
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -142,6 +143,30 @@ public class ModelDefineBaseListener implements ModelDefineListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitConstraintBodyDeclaration(ModelDefineParser.ConstraintBodyDeclarationContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterConstraintFieldDeclare(ModelDefineParser.ConstraintFieldDeclareContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitConstraintFieldDeclare(ModelDefineParser.ConstraintFieldDeclareContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterConstaintFiledId(ModelDefineParser.ConstaintFiledIdContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitConstaintFiledId(ModelDefineParser.ConstaintFiledIdContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
