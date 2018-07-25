@@ -1,0 +1,21 @@
+<template>
+  <div class="page">
+    <div class="page_bd top_space">
+        _controllers_holder
+    </div>
+    <div class="page_ft">
+      <x-button @click.native="submit" flex type="primary">保存</x-button>
+    </div>
+  </div>
+</template>
+ 
+<script>
+
+  export default {
+   data () {
+      return {
+        _data_placeholder
+      }
+    },
+
+</script>

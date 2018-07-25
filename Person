@@ -1,0 +1,1 @@
+<template><div><XInput title="age"/><XInput title="name"/><XDataTime title="birthday"/></div></template>

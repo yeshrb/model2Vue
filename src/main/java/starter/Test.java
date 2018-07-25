@@ -1,6 +1,6 @@
 package starter;
 
-import antlr4.*;
+import antlr4.gen.*;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 import java.io.*;
@@ -9,8 +9,9 @@ import java.io.*;
 public class Test {
     public static void main(String[] args) throws Exception {
         //新建一个CharStream,从标准输入读取数据
+        String filePath = Class.forName("starter.Test").getClassLoader().getResource("test.ml").getPath();
 
-        File file = new File("D:\\products\\model2Vue\\test.ml");
+        File file = new File(filePath);
         FileInputStream fis = new FileInputStream(file);
         ANTLRInputStream input = new ANTLRInputStream(fis);
 
@@ -27,7 +28,7 @@ public class Test {
 
         ParseTreeWalker walker = new ParseTreeWalker();
 
-        walker.walk(new modelToVue(),tree);
+        walker.walk(new ModelToVue(),tree);
         System.out.println();
     }
 }
