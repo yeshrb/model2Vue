@@ -15,6 +15,7 @@ VALIDATOR: 'validator';
 CONSTRAINTKEY
     :'nullable'
     |'blank'
+    |'max'
     ;
 
 CONSTRAINTVALUE :BOOL_LITERAL;
