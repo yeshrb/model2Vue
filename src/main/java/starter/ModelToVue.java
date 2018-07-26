@@ -6,7 +6,6 @@ import org.dom4j.*;
 import org.jaxen.JaxenException;
 import org.jaxen.dom4j.Dom4jXPath;
 
-import java.util.Iterator;
 import java.util.List;
 
 
@@ -45,46 +44,59 @@ public class ModelToVue extends ModelDefineBaseListener {
 
     @Override
     public void exitConstraintFieldDeclare(ModelDefineParser.ConstraintFieldDeclareContext ctx) {
-        String attr = ctx.constaintFiledId().getText();
-        String xpathExpr = "//*[@title='" + attr + "']";
-        Element currentElement = null;
 
+        String fieldHaveToBeConstraint = ctx.constaintFiledId().getText();
+        Element element = getElementByAttribute("title", fieldHaveToBeConstraint);
+
+        if (isRequiredField(ctx)) {
+            element.addAttribute("required", "true");
+        }
+
+        String validatorString = buildValidatorString(ctx);
+
+        if (validatorString != null && validatorString.length() > 0) {
+            element.addAttribute("validator", validatorString);
+        }
+    }
+
+
+    private Element getElementByAttribute(String attrName, String attrValue) {
+        String xpathExpr = "//*[@" + attrName + "='" + attrValue + "']";
+        Element currentElement = null;
         try {
             Dom4jXPath xpath = new Dom4jXPath(xpathExpr);
             currentElement = (Element) xpath.selectSingleNode(document);
-            currentElement.addAttribute("requied","true");
-            System.out.println(currentElement);
+
         } catch (JaxenException e) {
             e.printStackTrace();
         }
-        ModelDefineParser.ConstraintDeclareContext context = ctx.constraintDeclare(0);
-        List<ModelDefineParser.ConstraintDeclareContext> subContext = context.constraintDeclare();
-        for (ModelDefineParser.ConstraintDeclareContext ct : subContext) {
-            System.out.println(ct.CONSTRAINTKEY().getText() + ":" + ct.CONSTRAINTVALUE().getText());
-        }
-
-        ModelDefineParser.ValidatorDeclareContext vcts = ctx.validatorDeclare();
-        System.out.println(vcts.VALIDATOR().getText());
-        List<TerminalNode> methods = vcts.validatorMethods().IDENTIFIER();
-        for (int i = 0; i < methods.size(); i++) {
-            System.out.println("m" + i + ":" + methods.get(i));
-        }
-
-
-//        parse(document.getRootElement(),"title",attr);
-//        Element el = parse(document.getRootElement(),"title",attr);
-//        el.addAttribute("requied","true");
-
+        return currentElement;
     }
+
+    private boolean isRequiredField(ModelDefineParser.ConstraintFieldDeclareContext ctx) {
+        return ctx.constraintDeclare() != null;
+    }
+
+    private String buildValidatorString(ModelDefineParser.ConstraintFieldDeclareContext ctx) {
+        ModelDefineParser.ValidatorDeclareContext vcts = ctx.validatorDeclare();
+
+        if (vcts.validatorMethods() == null) return null;
+
+        List<TerminalNode> methods = vcts.validatorMethods().IDENTIFIER();
+        StringBuilder validatorStr = new StringBuilder("validator:");
+        for (int i = 0; i < methods.size(); i++) {
+            validatorStr.append(methods.get(i) +",");
+        }
+        String ret = validatorStr.toString();
+        return  ret.substring(0,ret.lastIndexOf(',')) ;
+    }
+
 
     @Override
     public void exitConstaintFiledId(ModelDefineParser.ConstaintFiledIdContext ctx) {
 
     }
 
-    private boolean isExsit(String text) {
-        return true;
-    }
 
     @Override
     public void exitConstraintDeclare(ModelDefineParser.ConstraintDeclareContext ctx) {
