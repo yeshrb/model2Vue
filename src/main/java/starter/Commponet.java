@@ -92,6 +92,6 @@ public class Commponet {
     }
 
     public void setComponetAttribute(String name, String value) {
-        stringTemp.add(name,value);
+        //stringTemp.add(name,value);
     }
 }

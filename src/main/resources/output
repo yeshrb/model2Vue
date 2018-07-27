@@ -1,0 +1,6 @@
+{
+    birthday={type=Date},
+    name={validator=aMethod,bMethod, type=pageTemplateFilePath, constraints=nullable:true,blank:tru},
+    age={validator=aMethod,bMethod, type=number, constraints=nullable:true,blank:tru},
+    others={type=pageTemplateFilePath[]}
+ }

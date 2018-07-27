@@ -27,7 +27,7 @@ public class STHelper {
         return pageTempate.render();
     }
 
-    private static String createControllerRenderString(Commponet controller) {
+    public static String createControllerRenderString(Commponet controller) {
         ST st = getSTByControllerType(controller.getType());
         st.add("title", controller.getTitle());
         st.add("model", controller.getTitle());
@@ -37,7 +37,7 @@ public class STHelper {
         return st.render();
     }
 
-    private static ST getSTByControllerType(String type) {
+    public static ST getSTByControllerType(String type) {
         String name = Controller.getTemplate(type);
         String defaultControllerName = "input";
         ST st = stGroup.getInstanceOf(name);

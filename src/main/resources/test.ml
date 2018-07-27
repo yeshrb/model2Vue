@@ -1,11 +1,11 @@
 Person {
        number age
-       string name
+       pageTemplateFilePath name
        Date birthday
-       string[] others
+       pageTemplateFilePath[] others
         constraints {
-          age nullable:true, blank:true validator:[aMethod,bMethod]
-          name nullable:true, blank:true validator:[aMethod,bMethod]
+          age nullable:true, blank:true validator:aMethod,bMethod
+          name nullable:true, blank:true validator:aMethod,bMethod
 
        }
    }

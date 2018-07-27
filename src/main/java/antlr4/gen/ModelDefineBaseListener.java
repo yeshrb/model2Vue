@@ -1,4 +1,4 @@
-// Generated from /Users/ljj/proLearn/anltr4/model2Vue/src/main/java/antlr4/ModelDefine.g4 by ANTLR 4.7
+// Generated from D:/products/model2Vue/src/main/java/antlr4\ModelDefine.g4 by ANTLR 4.7
 package antlr4.gen;
 
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -148,13 +148,13 @@ public class ModelDefineBaseListener implements ModelDefineListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterConstraintFieldDeclare(ModelDefineParser.ConstraintFieldDeclareContext ctx) { }
+	@Override public void enterFieldConstraintDeclare(ModelDefineParser.FieldConstraintDeclareContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitConstraintFieldDeclare(ModelDefineParser.ConstraintFieldDeclareContext ctx) { }
+	@Override public void exitFieldConstraintDeclare(ModelDefineParser.FieldConstraintDeclareContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

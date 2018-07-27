@@ -2,7 +2,7 @@ lexer grammar ModelLexer;
 import JavaLexer;
 
 //Model keyword
-STRING:     'string';
+STRING:     'pageTemplateFilePath';
 NUMBER:     'number';
 DATE:       'dataTime';
 CONSKEYWORD: 'constraints';

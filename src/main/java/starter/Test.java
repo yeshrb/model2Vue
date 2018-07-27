@@ -28,7 +28,10 @@ public class Test {
 
         ParseTreeWalker walker = new ParseTreeWalker();
 
-        walker.walk(new ModelToVue(),tree);
-        System.out.println();
+        ModelParser model = new ModelParser();
+        walker.walk(model,tree);
+
+        System.out.println(model.getRawControllers());
+
     }
 }

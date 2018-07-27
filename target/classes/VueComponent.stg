@@ -1,0 +1,13 @@
+popupPicker(title,model,data,required,showName)::= <%
+<PopupPicker title="$title$" v-model="$model$" :data="$data$" placeholder="请选择$title$"
+             $required$ v-validate:$model$:required="请选择$title$" show-name :$showName$/>
+%>
+
+input(title,model,data,required,showName)::= <%
+<XInput title="$title$" v-model="$model$" :data="$data$" placeholder="请选择$title$"
+             $required$ v-validate:$model$:required="请选择$title$" show-name :$showName$/>
+%>
+dataTime(title,model,data,required,showName)::= <%
+<Datetime title="$title$" v-model="$model$" :data="$data$" placeholder="请选择$title$"
+             $required$ v-validate:$model$:required="请选择$title$" show-name :$showName$ format="YYYY-MM-DD HH:mm"/>
+%>

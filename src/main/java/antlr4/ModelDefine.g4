@@ -50,10 +50,10 @@ constraintsBody
     : LBRACE constraintBodyDeclaration RBRACE
     ;
 constraintBodyDeclaration
-    :constraintFieldDeclare*
+    :fieldConstraintDeclare*
     ;
 
-constraintFieldDeclare : constaintFiledId (constraintDeclare)+ (validatorDeclare) ;
+fieldConstraintDeclare : constaintFiledId (constraintDeclare)+ (validatorDeclare) ;
 
 constaintFiledId
      : IDENTIFIER ('[' ']')*
@@ -66,6 +66,5 @@ validatorDeclare
     :VALIDATOR ':' validatorMethods;
 
 validatorMethods
-     :IDENTIFIER
-     | '[' IDENTIFIER (','IDENTIFIER)* ']'
+     :IDENTIFIER (',' IDENTIFIER)*
      ;

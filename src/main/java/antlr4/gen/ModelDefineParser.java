@@ -1,4 +1,4 @@
-// Generated from /Users/ljj/proLearn/anltr4/model2Vue/src/main/java/antlr4/ModelDefine.g4 by ANTLR 4.7
+// Generated from D:/products/model2Vue/src/main/java/antlr4\ModelDefine.g4 by ANTLR 4.7
 package antlr4.gen;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
@@ -40,13 +40,13 @@ public class ModelDefineParser extends Parser {
 		RULE_modelDeclaration = 0, RULE_modelBody = 1, RULE_modelBodyDeclaration = 2, 
 		RULE_fieldDeclaration = 3, RULE_typeType = 4, RULE_modelType = 5, RULE_primitiveType = 6, 
 		RULE_fieldDeclaratorId = 7, RULE_constraintsDeclaration = 8, RULE_constraintsBody = 9, 
-		RULE_constraintBodyDeclaration = 10, RULE_constraintFieldDeclare = 11, 
+		RULE_constraintBodyDeclaration = 10, RULE_fieldConstraintDeclare = 11, 
 		RULE_constaintFiledId = 12, RULE_constraintDeclare = 13, RULE_validatorDeclare = 14, 
 		RULE_validatorMethods = 15;
 	public static final String[] ruleNames = {
 		"modelDeclaration", "modelBody", "modelBodyDeclaration", "fieldDeclaration", 
 		"typeType", "modelType", "primitiveType", "fieldDeclaratorId", "constraintsDeclaration", 
-		"constraintsBody", "constraintBodyDeclaration", "constraintFieldDeclare", 
+		"constraintsBody", "constraintBodyDeclaration", "fieldConstraintDeclare", 
 		"constaintFiledId", "constraintDeclare", "validatorDeclare", "validatorMethods"
 	};
 
@@ -649,11 +649,11 @@ public class ModelDefineParser extends Parser {
 	}
 
 	public static class ConstraintBodyDeclarationContext extends ParserRuleContext {
-		public List<ConstraintFieldDeclareContext> constraintFieldDeclare() {
-			return getRuleContexts(ConstraintFieldDeclareContext.class);
+		public List<FieldConstraintDeclareContext> fieldConstraintDeclare() {
+			return getRuleContexts(FieldConstraintDeclareContext.class);
 		}
-		public ConstraintFieldDeclareContext constraintFieldDeclare(int i) {
-			return getRuleContext(ConstraintFieldDeclareContext.class,i);
+		public FieldConstraintDeclareContext fieldConstraintDeclare(int i) {
+			return getRuleContext(FieldConstraintDeclareContext.class,i);
 		}
 		public ConstraintBodyDeclarationContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -683,7 +683,7 @@ public class ModelDefineParser extends Parser {
 				{
 				{
 				setState(84);
-				constraintFieldDeclare();
+				fieldConstraintDeclare();
 				}
 				}
 				setState(89);
@@ -703,7 +703,7 @@ public class ModelDefineParser extends Parser {
 		return _localctx;
 	}
 
-	public static class ConstraintFieldDeclareContext extends ParserRuleContext {
+	public static class FieldConstraintDeclareContext extends ParserRuleContext {
 		public ConstaintFiledIdContext constaintFiledId() {
 			return getRuleContext(ConstaintFiledIdContext.class,0);
 		}
@@ -716,23 +716,23 @@ public class ModelDefineParser extends Parser {
 		public ConstraintDeclareContext constraintDeclare(int i) {
 			return getRuleContext(ConstraintDeclareContext.class,i);
 		}
-		public ConstraintFieldDeclareContext(ParserRuleContext parent, int invokingState) {
+		public FieldConstraintDeclareContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_constraintFieldDeclare; }
+		@Override public int getRuleIndex() { return RULE_fieldConstraintDeclare; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ModelDefineListener ) ((ModelDefineListener)listener).enterConstraintFieldDeclare(this);
+			if ( listener instanceof ModelDefineListener ) ((ModelDefineListener)listener).enterFieldConstraintDeclare(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ModelDefineListener ) ((ModelDefineListener)listener).exitConstraintFieldDeclare(this);
+			if ( listener instanceof ModelDefineListener ) ((ModelDefineListener)listener).exitFieldConstraintDeclare(this);
 		}
 	}
 
-	public final ConstraintFieldDeclareContext constraintFieldDeclare() throws RecognitionException {
-		ConstraintFieldDeclareContext _localctx = new ConstraintFieldDeclareContext(_ctx, getState());
-		enterRule(_localctx, 22, RULE_constraintFieldDeclare);
+	public final FieldConstraintDeclareContext fieldConstraintDeclare() throws RecognitionException {
+		FieldConstraintDeclareContext _localctx = new FieldConstraintDeclareContext(_ctx, getState());
+		enterRule(_localctx, 22, RULE_fieldConstraintDeclare);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -976,45 +976,26 @@ public class ModelDefineParser extends Parser {
 		enterRule(_localctx, 30, RULE_validatorMethods);
 		int _la;
 		try {
-			setState(134);
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(123);
+			match(IDENTIFIER);
+			setState(128);
 			_errHandler.sync(this);
-			switch (_input.LA(1)) {
-			case IDENTIFIER:
-				enterOuterAlt(_localctx, 1);
+			_la = _input.LA(1);
+			while (_la==COMMA) {
 				{
-				setState(123);
-				match(IDENTIFIER);
-				}
-				break;
-			case LBRACK:
-				enterOuterAlt(_localctx, 2);
 				{
 				setState(124);
-				match(LBRACK);
+				match(COMMA);
 				setState(125);
 				match(IDENTIFIER);
+				}
+				}
 				setState(130);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while (_la==COMMA) {
-					{
-					{
-					setState(126);
-					match(COMMA);
-					setState(127);
-					match(IDENTIFIER);
-					}
-					}
-					setState(132);
-					_errHandler.sync(this);
-					_la = _input.LA(1);
-				}
-				setState(133);
-				match(RBRACK);
-				}
-				break;
-			default:
-				throw new NoViableAltException(this);
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -1044,7 +1025,7 @@ public class ModelDefineParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3x\u008b\4\2\t\2\4"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3x\u0086\4\2\t\2\4"+
 		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
 		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\3\2\3\2\3"+
 		"\2\3\3\3\3\3\3\3\3\3\4\7\4+\n\4\f\4\16\4.\13\4\3\4\7\4\61\n\4\f\4\16\4"+
@@ -1053,31 +1034,29 @@ public class ModelDefineParser extends Parser {
 		"\3\13\3\13\3\13\3\f\7\fX\n\f\f\f\16\f[\13\f\3\r\3\r\6\r_\n\r\r\r\16\r"+
 		"`\3\r\3\r\3\16\3\16\3\16\7\16h\n\16\f\16\16\16k\13\16\3\17\3\17\3\17\3"+
 		"\17\3\17\3\17\3\17\3\17\7\17u\n\17\f\17\16\17x\13\17\3\20\3\20\3\20\3"+
-		"\20\3\21\3\21\3\21\3\21\3\21\7\21\u0083\n\21\f\21\16\21\u0086\13\21\3"+
-		"\21\5\21\u0089\n\21\3\21\2\3\34\22\2\4\6\b\n\f\16\20\22\24\26\30\32\34"+
-		"\36 \2\3\4\2\3\5\f\f\2\u0085\2\"\3\2\2\2\4%\3\2\2\2\6,\3\2\2\2\b\65\3"+
-		"\2\2\2\n:\3\2\2\2\fC\3\2\2\2\16E\3\2\2\2\20G\3\2\2\2\22O\3\2\2\2\24R\3"+
-		"\2\2\2\26Y\3\2\2\2\30\\\3\2\2\2\32d\3\2\2\2\34l\3\2\2\2\36y\3\2\2\2 \u0088"+
-		"\3\2\2\2\"#\7x\2\2#$\5\4\3\2$\3\3\2\2\2%&\7H\2\2&\'\5\6\4\2\'(\7I\2\2"+
-		"(\5\3\2\2\2)+\5\b\5\2*)\3\2\2\2+.\3\2\2\2,*\3\2\2\2,-\3\2\2\2-\62\3\2"+
-		"\2\2.,\3\2\2\2/\61\5\22\n\2\60/\3\2\2\2\61\64\3\2\2\2\62\60\3\2\2\2\62"+
-		"\63\3\2\2\2\63\7\3\2\2\2\64\62\3\2\2\2\65\66\5\n\6\2\66\67\5\20\t\2\67"+
-		"\t\3\2\2\28;\5\16\b\29;\5\f\7\2:8\3\2\2\2:9\3\2\2\2;@\3\2\2\2<=\7J\2\2"+
-		"=?\7K\2\2><\3\2\2\2?B\3\2\2\2@>\3\2\2\2@A\3\2\2\2A\13\3\2\2\2B@\3\2\2"+
-		"\2CD\7x\2\2D\r\3\2\2\2EF\t\2\2\2F\17\3\2\2\2GL\7x\2\2HI\7J\2\2IK\7K\2"+
-		"\2JH\3\2\2\2KN\3\2\2\2LJ\3\2\2\2LM\3\2\2\2M\21\3\2\2\2NL\3\2\2\2OP\7\6"+
-		"\2\2PQ\5\24\13\2Q\23\3\2\2\2RS\7H\2\2ST\5\26\f\2TU\7I\2\2U\25\3\2\2\2"+
-		"VX\5\30\r\2WV\3\2\2\2X[\3\2\2\2YW\3\2\2\2YZ\3\2\2\2Z\27\3\2\2\2[Y\3\2"+
-		"\2\2\\^\5\32\16\2]_\5\34\17\2^]\3\2\2\2_`\3\2\2\2`^\3\2\2\2`a\3\2\2\2"+
-		"ab\3\2\2\2bc\5\36\20\2c\31\3\2\2\2di\7x\2\2ef\7J\2\2fh\7K\2\2ge\3\2\2"+
-		"\2hk\3\2\2\2ig\3\2\2\2ij\3\2\2\2j\33\3\2\2\2ki\3\2\2\2lm\b\17\1\2mn\7"+
-		"\b\2\2no\7U\2\2op\7\t\2\2pv\3\2\2\2qr\f\3\2\2rs\7M\2\2su\5\34\17\4tq\3"+
-		"\2\2\2ux\3\2\2\2vt\3\2\2\2vw\3\2\2\2w\35\3\2\2\2xv\3\2\2\2yz\7\7\2\2z"+
-		"{\7U\2\2{|\5 \21\2|\37\3\2\2\2}\u0089\7x\2\2~\177\7J\2\2\177\u0084\7x"+
-		"\2\2\u0080\u0081\7M\2\2\u0081\u0083\7x\2\2\u0082\u0080\3\2\2\2\u0083\u0086"+
-		"\3\2\2\2\u0084\u0082\3\2\2\2\u0084\u0085\3\2\2\2\u0085\u0087\3\2\2\2\u0086"+
-		"\u0084\3\2\2\2\u0087\u0089\7K\2\2\u0088}\3\2\2\2\u0088~\3\2\2\2\u0089"+
-		"!\3\2\2\2\r,\62:@LY`iv\u0084\u0088";
+		"\20\3\21\3\21\3\21\7\21\u0081\n\21\f\21\16\21\u0084\13\21\3\21\2\3\34"+
+		"\22\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \2\3\4\2\3\5\f\f\2\177\2\""+
+		"\3\2\2\2\4%\3\2\2\2\6,\3\2\2\2\b\65\3\2\2\2\n:\3\2\2\2\fC\3\2\2\2\16E"+
+		"\3\2\2\2\20G\3\2\2\2\22O\3\2\2\2\24R\3\2\2\2\26Y\3\2\2\2\30\\\3\2\2\2"+
+		"\32d\3\2\2\2\34l\3\2\2\2\36y\3\2\2\2 }\3\2\2\2\"#\7x\2\2#$\5\4\3\2$\3"+
+		"\3\2\2\2%&\7H\2\2&\'\5\6\4\2\'(\7I\2\2(\5\3\2\2\2)+\5\b\5\2*)\3\2\2\2"+
+		"+.\3\2\2\2,*\3\2\2\2,-\3\2\2\2-\62\3\2\2\2.,\3\2\2\2/\61\5\22\n\2\60/"+
+		"\3\2\2\2\61\64\3\2\2\2\62\60\3\2\2\2\62\63\3\2\2\2\63\7\3\2\2\2\64\62"+
+		"\3\2\2\2\65\66\5\n\6\2\66\67\5\20\t\2\67\t\3\2\2\28;\5\16\b\29;\5\f\7"+
+		"\2:8\3\2\2\2:9\3\2\2\2;@\3\2\2\2<=\7J\2\2=?\7K\2\2><\3\2\2\2?B\3\2\2\2"+
+		"@>\3\2\2\2@A\3\2\2\2A\13\3\2\2\2B@\3\2\2\2CD\7x\2\2D\r\3\2\2\2EF\t\2\2"+
+		"\2F\17\3\2\2\2GL\7x\2\2HI\7J\2\2IK\7K\2\2JH\3\2\2\2KN\3\2\2\2LJ\3\2\2"+
+		"\2LM\3\2\2\2M\21\3\2\2\2NL\3\2\2\2OP\7\6\2\2PQ\5\24\13\2Q\23\3\2\2\2R"+
+		"S\7H\2\2ST\5\26\f\2TU\7I\2\2U\25\3\2\2\2VX\5\30\r\2WV\3\2\2\2X[\3\2\2"+
+		"\2YW\3\2\2\2YZ\3\2\2\2Z\27\3\2\2\2[Y\3\2\2\2\\^\5\32\16\2]_\5\34\17\2"+
+		"^]\3\2\2\2_`\3\2\2\2`^\3\2\2\2`a\3\2\2\2ab\3\2\2\2bc\5\36\20\2c\31\3\2"+
+		"\2\2di\7x\2\2ef\7J\2\2fh\7K\2\2ge\3\2\2\2hk\3\2\2\2ig\3\2\2\2ij\3\2\2"+
+		"\2j\33\3\2\2\2ki\3\2\2\2lm\b\17\1\2mn\7\b\2\2no\7U\2\2op\7\t\2\2pv\3\2"+
+		"\2\2qr\f\3\2\2rs\7M\2\2su\5\34\17\4tq\3\2\2\2ux\3\2\2\2vt\3\2\2\2vw\3"+
+		"\2\2\2w\35\3\2\2\2xv\3\2\2\2yz\7\7\2\2z{\7U\2\2{|\5 \21\2|\37\3\2\2\2"+
+		"}\u0082\7x\2\2~\177\7M\2\2\177\u0081\7x\2\2\u0080~\3\2\2\2\u0081\u0084"+
+		"\3\2\2\2\u0082\u0080\3\2\2\2\u0082\u0083\3\2\2\2\u0083!\3\2\2\2\u0084"+
+		"\u0082\3\2\2\2\f,\62:@LY`iv\u0082";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
